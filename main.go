@@ -3,7 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"mycmd/mymath"
+	"github.com/JekaSmailik/mycmd/mymath"
 	"os"
 )
 
