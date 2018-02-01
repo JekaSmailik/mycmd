@@ -6,11 +6,33 @@ import (
 	"time"
 )
 
-func MyTime() {
-	time := time.Now()
-	mitime := time.Format("Дата 2.01.2006 Время 15:04:05")
+func MyTime() string {
+	timeNow := time.Now()
+	mytime := timeNow.Format("Дата 2.01.2006" +
+		"\nВремя 15:04\n")
 
-	fmt.Println(mitime)
+	var myday string
+
+	switch timeNow.Weekday().String() {
+	case "Monday":
+		myday = "понедельник"
+	case "Tuesday":
+		myday = "вторник"
+	case "Wednesday":
+		myday = "среда"
+	case "Thursday":
+		myday = "четверг"
+	case "Friday":
+		myday = "пятница"
+	case "Saturday":
+		myday = "суббота"
+	case "Sunday":
+		myday = "воскресение"
+	}
+
+	fmt.Println("День недели", myday)
+
+	return mytime
 }
 
 func MySumma(number1 float64, number2 float64) (float64, error) {
