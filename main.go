@@ -14,6 +14,8 @@ func main() {
 		"3. Для вывода массива введите mas \n" +
 		"4. Для выхода введите exit")
 
+	defer fmt.Println("Программа завершенa")
+
 	// Ввод команды для дальнейшего действия
 	var x string = " "
 
@@ -25,7 +27,8 @@ func main() {
 		switch x {
 
 		case "time":
-			mymath.MyTime()
+
+			fmt.Println(mymath.MyTime(), "\n ")
 
 		case "cal":
 			fmt.Println("Введите два числа через пробел")
